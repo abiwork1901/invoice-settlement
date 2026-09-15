@@ -11,7 +11,7 @@ It fixes the common review issues from the original PR: race conditions, missing
 | Java | 21 |
 | Spring Boot | 3.3.4 |
 | Spring Data JPA | (via Spring Boot) |
-| H2 (in-memory DB for local dev/tests) | runtime |
+| H2 (in-memory DB for dev/tests) | runtime |
 | Maven | 3.9+ |
 | JUnit 5 | (via spring-boot-starter-test) |
 
@@ -25,15 +25,10 @@ mvn -version    # should show Maven 3.9+
 ## Quick start
 
 ```bash
-cd ~/play/invoice-settlement
-
-# 1. Compile
+git clone https://github.com/abiwork1901/invoice-settlement.git
+cd invoice-settlement
 mvn clean compile
-
-# 2. Run unit/integration tests
 mvn test
-
-# 3. Run the Spring Boot app (demo profile prints sample settlements)
 mvn spring-boot:run -Dspring-boot.run.profiles=demo
 ```
 
